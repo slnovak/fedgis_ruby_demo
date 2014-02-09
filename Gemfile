@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'activesupport',  '~> 4.0.2'
+gem 'chain',          '~> 0.0.4'
+gem 'compass',        '~> 0.12.2'
+gem 'rake',           '~> 10.1.1'
+gem 'sanitize',       '~> 2.1.0'
+gem 'sass',           '~> 3.2.14'
+gem 'sinatra',        '~> 1.4.4'
+gem 'slim',           '~> 2.0.2'
