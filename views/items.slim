@@ -1,0 +1,33 @@
+div#search
+  form
+    input id='search' type='text' name='query' value="#{params[:query]}"
+    input type='submit' class='btn'
+
+h1 Search results
+
+- items.each do |item|
+
+  div class='item'
+
+    div class='logo'
+
+      - if item.thumbnail
+        img src="http://www.arcgis.com/sharing/rest/content/items/#{item.id}/info/#{item.thumbnail}"
+
+      - else
+        i class='icon-data-alt'
+
+    div class='name'
+      == item.title
+
+    div class='description'
+      == Sanitize.clean(item.description).to_s.truncate(300)
+
+    div class='owner'
+      | Created by #{item.owner}
+
+    div class='arcgis-link'
+      span class='arcgis-link'
+        a href="https://www.arcgis.com/home/item.html?id=#{item.id}" HTML
+      span class='arcgis-link'
+        a href="http://arcgis.com/sharing/rest/content/items/#{item.id}?f=json" JSON
