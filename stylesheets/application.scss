@@ -5,11 +5,14 @@
 body {
   background:  #fff;
   color:       #0d0d0d;
-  font:        62.5% Arial, Helvetica, sans-serif;
   padding:     50px;
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
 }
 
 div.item {
+  position: relative;
   border:         1px solid;
   border-bottom:  none;
   border-left:    none;
@@ -17,6 +20,15 @@ div.item {
   height:         80px;
   padding:        10px;
   position:       relative;
+}
+
+div#container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
 }
 
 div.arcgis-link {
@@ -56,10 +68,18 @@ div.owner {
 }
 
 div#search {
-  display:  inline;
+  display: inline;
+  height: 30px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+form .field, form .actions {
+  margin: 12px 0;
 }
 
 form {
+  display: inline;
 }
 
 input#search {
@@ -83,11 +103,15 @@ input#search {
   font-size:              20px;
   padding:                8px 31px;
   text-decoration:        none;
-  text-shadow:            0px 1px 0px #2f6627;
 }
 .btn:hover {
   background-color:  #5cbf2a;
 }
+
+.btn:hover, div.result:hover, input[type='submit']:hover {
+  background-color:#FFFFAB;
+}
+
 .btn:active {
   position:  relative;
   top:       1px;
