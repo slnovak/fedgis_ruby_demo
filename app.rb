@@ -40,8 +40,8 @@ class ArcgisLite < Sinatra::Base
   end
 
   def search
-    options = {query: 'dc'}.merge(params)
-    results = arcgis_online.sharing.rest.search(q: "#{options[:query]} AND type=\"feature service\"")
+    params[:query] ||= 'crime'
+    results = arcgis_online.sharing.rest.search(q: "#{params[:query]} AND type=\"feature service\"")
     snake_casify results.results
   end
 

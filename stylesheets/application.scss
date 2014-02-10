@@ -17,7 +17,7 @@ div.item {
   border-bottom:  none;
   border-left:    none;
   border-right:   none;
-  height:         80px;
+  height:         100px;
   padding:        10px;
   position:       relative;
 }
@@ -98,7 +98,6 @@ input#search {
   border:                 1px solid #18ab29;
   display:                inline-block;
   cursor:                 pointer;
-  color:                  #ffffff;
   font-family:            arial;
   font-size:              20px;
   padding:                8px 31px;
@@ -108,8 +107,8 @@ input#search {
   background-color:  #5cbf2a;
 }
 
-.btn:hover, div.result:hover, input[type='submit']:hover {
-  background-color:#FFFFAB;
+.btn:hover, div.item:hover, input[type='submit']:hover {
+  background-color:  #FFFFAB;
 }
 
 .btn:active {
