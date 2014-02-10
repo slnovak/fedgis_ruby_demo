@@ -25,3 +25,10 @@ h1 Search results
 
     div class='owner'
       | Created by #{result.owner}
+
+    div class='arcgis-link'
+      | Arcgis: #{result.title}
+      span class='arcgis-link'
+        a href="https://www.arcgis.com/home/item.html?id=#{result.id}" HTML
+      span class='arcgis-link'
+        a href="http://arcgis.com/sharing/rest/content/items/#{result.id}?f=json" JSON

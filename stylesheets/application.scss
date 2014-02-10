@@ -10,12 +10,24 @@ body {
 }
 
 div.result {
+  position: relative;
   border:         1px solid;
   border-bottom:  none;
   border-left:    none;
   border-right:   none;
   padding:        10px;
-  height:         60px;
+  height:         80px;
+}
+
+div.arcgis-link {
+  position: absolute;
+  bottom: 0px;
+  padding-top: 10px;
+}
+
+span.arcgis-link {
+  padding-left: 10px;
+  padding-bottom: 5px;
 }
 
 div.logo {
