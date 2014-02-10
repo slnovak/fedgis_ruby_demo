@@ -1,8 +1,30 @@
 doctype html
 html
+
   head
+
     title ArcGIS Lite
+
     link href='/stylesheets/application.css' media='screen' rel='stylesheet' type='text/css'
+
   body
+
     div#container
+
+      div#login
+
+        - if logged_in?
+          form action='/logout'
+            input type='submit' class='btn' value='Logout'
+
+        - else
+          form action='/login'
+            input type='submit' class='btn' value='Login'
+
+      div#search
+
+        form
+          input id='search' type='text' name='query' value="#{params[:query]}"
+          input type='submit' class='btn'
+
       == yield

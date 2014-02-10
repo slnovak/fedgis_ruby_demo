@@ -3,32 +3,33 @@
 @import "compass/css3";
 
 body {
-  background:  #fff;
-  color:       #0d0d0d;
-  padding:     50px;
-  background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+  background:        #fff;
+  color:             #0d0d0d;
+  background-color:  #4B7399;
+  font-family:       Verdana, Helvetica, Arial;
+  font-size:         14px;
+  padding-top:       10px;
+  padding:           50px;
 }
 
 div.item {
-  position: relative;
+  position:       relative;
   border:         1px solid;
   border-bottom:  none;
   border-left:    none;
   border-right:   none;
-  height:         100px;
+  height:         80px;
   padding:        10px;
   position:       relative;
 }
 
 div#container {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
+  width:             75%;
+  margin:            0 auto;
+  background-color:  #FFF;
+  padding:           20px 40px;
+  border:            solid 1px black;
+  margin-top:        20px;
 }
 
 div.arcgis-link {
@@ -45,11 +46,14 @@ span.arcgis-link {
 
 div.logo {
   img {
-    float:          left;
-    height:         60px;
-    padding-right:  10px;
-    position:       relative;
-    width:          60px;
+    border:        1px solid #021a40;
+    float:         left;
+    height:        60px;
+    margin-right:  10px;
+    margin-top:    10px;
+    padding:       1px;
+    position:      relative;
+    width:         60px;
   }
 }
 
@@ -57,6 +61,7 @@ div.name {
   color:        #4d4d4d;
   font-size:    18px;
   font-weight:  bold;
+  padding-bottom: 5px;
 }
 
 div.description {
@@ -64,18 +69,25 @@ div.description {
 }
 
 div.owner {
-
+  font-style:    italic;
+  float:         right;
+  margin-right:  20px;
 }
 
 div#search {
-  display: inline;
-  height: 30px;
-  padding-bottom: 40px;
-  position: relative;
+  display:         inline;
+  height:          30px;
+  padding-bottom:  40px;
+  position:        relative;
 }
 
 form .field, form .actions {
   margin: 12px 0;
+}
+
+div#login {
+  display:  inline;
+  float:    right;
 }
 
 form {
@@ -117,7 +129,7 @@ input#search {
 }
 
 a {
-  border: none;
-  text-decoration: none;
-  color: #A0B4F0;
+  border:           none;
+  text-decoration:  none;
+  color:            #A0B4F0;
 }

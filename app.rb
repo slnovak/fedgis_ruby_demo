@@ -21,11 +21,20 @@ class ArcgisLite < Sinatra::Base
   end
 
   get '/search' do
-    slim :items, locals: { items: search }
+    slim :search, locals: { items: search }
   end
 
   get '/items' do
     slim :items, locals: { items: current_user_items }
+  end
+
+  get '/login' do
+    redirect '/auth/arcgis'
+  end
+
+  get '/logout' do
+    session[:auth_payload] = nil
+    redirect '/search'
   end
 
   get '/auth/:provider/callback' do
@@ -33,11 +42,20 @@ class ArcgisLite < Sinatra::Base
     redirect "/items"
   end
 
+  helpers do
+
+    def logged_in?
+      !!auth_payload
+    end
+
+  end
+
   private
 
   def arcgis_online
     @arcgis_online ||= Chain::Url.new('https://www.arcgis.com/', _default_parameters: { f: :json, token: token })
   end
+
 
   def search
     params[:query] ||= 'crime'
@@ -56,11 +74,11 @@ class ArcgisLite < Sinatra::Base
   end
 
   def current_user
-    @current_user ||= auth_payload.info if auth_payload
+    @current_user ||= auth_payload.info if logged_in?
   end
 
   def token
-    @credentials ||= auth_payload.credentials.token if auth_payload
+    @credentials ||= auth_payload.credentials.token if logged_in?
   end
 
   def snake_casify(items)

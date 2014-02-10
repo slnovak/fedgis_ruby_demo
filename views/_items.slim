@@ -1,0 +1,20 @@
+- items.each do |item|
+
+  div class='item'
+
+    div class='logo'
+
+      - if item.thumbnail
+        img src="http://www.arcgis.com/sharing/rest/content/items/#{item.id}/info/#{item.thumbnail}"
+
+      - else
+        i class='icon-data-alt'
+
+    div class='name'
+      a href="https://www.arcgis.com/home/item.html?id=#{item.id}" #{item.title}
+
+    div class='description'
+      == Sanitize.clean(item.description).to_s.truncate(250)
+
+    div class='owner'
+      | Created by #{item.owner}
