@@ -12,8 +12,8 @@ class ArcgisLite < Sinatra::Base
   
   set :slim, pretty: true
 
-  get '/search/:query' do
-    payload = search params[:query]
+  get '/search' do
+    payload = search params['query']
 
     slim :results, locals: {
       results: payload.results }
