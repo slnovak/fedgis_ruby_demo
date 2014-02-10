@@ -20,6 +20,10 @@ class ArcgisLite < Sinatra::Base
     provider :arcgis, ENV['CLIENT_ID'], ENV['CLIENT_SECRET']
   end
 
+  get '/' do
+    redirect '/search'
+  end
+
   get '/search' do
     slim :search, locals: { items: search }
   end
