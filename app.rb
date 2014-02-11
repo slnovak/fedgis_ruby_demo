@@ -28,6 +28,7 @@ class ArcgisLite < Sinatra::Base
   end
 
   get '/items' do
+    redirect '/' unless logged_in?
     slim :items, locals: { items: current_user_items }
   end
 
@@ -49,6 +50,10 @@ class ArcgisLite < Sinatra::Base
 
     def logged_in?
       !!auth_payload
+    end
+
+    def current_user
+      @current_user ||= auth_payload.info if logged_in?
     end
 
   end
@@ -73,10 +78,6 @@ class ArcgisLite < Sinatra::Base
 
   def auth_payload
     session[:auth_payload]
-  end
-
-  def current_user
-    @current_user ||= auth_payload.info if logged_in?
   end
 
   def token

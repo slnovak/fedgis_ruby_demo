@@ -11,6 +11,21 @@ html
 
     div#container
 
+      - if logged_in?
+
+        div#name
+
+          p
+            | Welcome, #{current_user.full_name}! View your 
+            a href="/items" items
+            | .
+
+      div#search
+
+        form action='/search'
+          input id='search' type='text' name='query' value="#{params[:query]}"
+          input type='submit' class='btn'
+
       div#login
 
         - if logged_in?
@@ -20,11 +35,5 @@ html
         - else
           form action='/login'
             input type='submit' class='btn' value='Login'
-
-      div#search
-
-        form action='/search'
-          input id='search' type='text' name='query' value="#{params[:query]}"
-          input type='submit' class='btn'
 
       == yield
