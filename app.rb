@@ -2,7 +2,6 @@ require 'sinatra/base'
 
 require 'active_support/all'
 require 'chain'
-require 'compass'
 require 'dotenv'
 require 'hashie'
 require 'omniauth-arcgis'
@@ -59,7 +58,6 @@ class ArcgisLite < Sinatra::Base
   def arcgis_online
     @arcgis_online ||= Chain::Url.new('https://www.arcgis.com/', _default_parameters: { f: :json, token: token })
   end
-
 
   def search
     params[:query] ||= 'crime'
