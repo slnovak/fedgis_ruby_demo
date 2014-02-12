@@ -1,6 +1,7 @@
 # FedGIS 2014 ArcGIS & Ruby Demo App
 
-You will need an ArcGIS developer account and application in order to log into this application. First, create an [account](https://developers.arcgis.com). Next, you will want to create an application so that you will have a client ID and client secret.
+You will need an ArcGIS developer account and application in order to log into this application. First, create an [account](https://developers.arcgis.com). Next, you will want to create an application so that you will have a *client id* and *client secret*. Also make sure you fill in the redirect uri with *http://localhost:4567* so that OAuth knows where to redirect.
+
 
 This is an application designed to show a few concepts.
 
