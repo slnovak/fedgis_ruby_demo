@@ -31,4 +31,4 @@ Next, run the server!
 
 ## I need to get bootstrapped
 
-If you are completely new to ruby and you need to set up your machine [Rails Bridge](http://docs.railsbridge.org/installfest/) probably has more then you need. Have fun!
+If you are completely new to ruby and you need to set up your machine [Rails Bridge](http://docs.railsbridge.org/installfest/choose_your_operating_system?back=installfest%23step3) probably has more then you need. Have fun!
