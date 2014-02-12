@@ -26,3 +26,7 @@ First, lets compile the SASS into css
 `$ bundle exec rake css:compile`
 
 Next, run the server!
+
+## I need to get bootstrapped
+
+If you are completely new to ruby and you need to set up your machine [Rails Bridge](http://docs.railsbridge.org/installfest/) probably has more then you need. Have fun!
